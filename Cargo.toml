@@ -1,0 +1,22 @@
+[package]
+name = "novax-price-getter"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+novax = "0.0.1"
+novax-token = "0.0.1"
+novax-caching = "0.0.1"
+tokio = { version = "1.32.0", features = ["full"] }
+async-recursion = "1.0.5"
+num-bigint = "0.4.4"
+num-rational = "0.4.1"
+num-traits = "0.2.16"
+
+[dev-dependencies]
+novax-mocking = "0.0.1"
+mx-exchange-sc-pair = { package = "pair", git = "https://github.com/multiversx/mx-exchange-sc.git", rev = "df198583c2789a532690d963d515c5212c6f3da8" }
+mx-exchange-sc-router = { package = "router", git = "https://github.com/multiversx/mx-exchange-sc.git", rev = "df198583c2789a532690d963d515c5212c6f3da8" }
+lazy_static = "1.4.0"

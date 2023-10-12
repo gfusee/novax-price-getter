@@ -1,0 +1,3 @@
+[env]
+NOVAX_PATH={ value = ".novax", relative = true }
+XEXCHANGE_CLONE_PATH={ value = "xexchange_clone.json", relative = true }
