@@ -113,7 +113,12 @@ where
             )
             .await?;
 
-        Ok(pair_address)
+        if pair_address.to_bytes() == <[u8; 32]>::default() {
+            Err(XExchangeError::PairNotFound { first_token_identifier: first_token_id.to_string(), second_token_identifier: second_token_id.to_string() }.into())
+        } else {
+            Ok(pair_address)
+        }
+
     }
 
     async fn get_reserve_for_token_identifier(

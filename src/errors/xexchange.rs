@@ -1,6 +1,6 @@
 use crate::errors::app::AppError;
 
-#[derive(Debug)]
+#[derive(PartialEq, Clone, Debug)]
 pub enum XExchangeError {
     PairNotFound { first_token_identifier: String, second_token_identifier: String }
 }

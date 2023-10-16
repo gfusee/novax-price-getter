@@ -1,7 +1,7 @@
 use novax::errors::NovaXError;
 use crate::errors::xexchange::XExchangeError;
 
-#[derive(Debug)]
+#[derive(PartialEq, Clone, Debug)]
 pub enum AppError {
     XExchange(XExchangeError),
     NovaXError(NovaXError)
