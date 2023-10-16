@@ -64,7 +64,7 @@ where
             (token_identifier, token_decimals)
         };
 
-        let Ok(pair) = self.get_pair_for_token(&self.wegld_token_identifier, &actual_token_identifier).await else {
+        let Ok(pair) = self.get_pair_for_token(&self.wegld_token_identifier, actual_token_identifier).await else {
             return Err(XExchangeError::PairNotFound { first_token_identifier: self.wegld_token_identifier.clone(), second_token_identifier: actual_token_identifier.to_string() }.into())
         };
         let pair_str = pair.to_bech32_string().unwrap();
@@ -136,6 +136,6 @@ where
             .get_reserve(&token_id.to_string())
             .await?;
 
-        Ok(result.into())
+        Ok(result)
     }
 }
