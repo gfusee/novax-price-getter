@@ -1,6 +1,6 @@
 # Novax xExchange Price Getter Example
 
-Welcome to a hands-on demonstration of how to interact with contracts using the [Novax library](https://github.com/gfusee/novax). This repository not only showcases the potential of Novax but also provides a practical solution to fetch token prices on xExchange.
+Welcome to a hands-on demonstration of how to interact with contracts using the [NovaX library](https://github.com/gfusee/novax). This repository not only showcases the potential of Novax but also provides a practical solution to fetch token prices on xExchange.
 
 ## Key Features
 
